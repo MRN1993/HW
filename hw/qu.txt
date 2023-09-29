@@ -1,0 +1,16 @@
+select * from film
+where release_year = 2006 and rental_rate >= 4
+
+
+select * from film
+order by length desc
+limit 10
+
+select co.country ,count(co.country_id)
+from 
+customer cu join address ad on cu.address_id = ad.address_id 
+join city ci on ci.city_id = ad.city_id 
+join country co on co.country_id = ci.country_id 
+group by co.country_id 
+order by co.country desc 
+
